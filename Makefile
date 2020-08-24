@@ -23,7 +23,7 @@ run-nginx-test: nginx-up
 		artillery run \
 		--config /tests/config/nginx.yml \
 		--output /reports/nginx.json \
-		/tests/test.yml
+		/tests/simple.yml
 
 run-haproxy-test: haproxy-up
 	sleep 30
@@ -35,7 +35,7 @@ run-haproxy-test: haproxy-up
 		artillery run \
 		--config /tests/config/haproxy.yml \
 		--output /reports/haproxy.json \
-		/tests/test.yml
+		/tests/simple.yml
 
 nginx-up:
 	docker-compose down
